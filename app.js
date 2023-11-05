@@ -16,7 +16,7 @@ app.use(express.static('public'));
 // Rota para a página inicial
 app.get('/', (req, res) => {
     // Define o controle de cache
-    res.setHeader('Cache-Control', 'public, s-maxage=1');
+    res.setHeader('Cache-Control', 'public, max-age=3600');
     // Envia o arquivo HTML da página inicial
     res.sendFile(__dirname + '/public/index.html');
 });
