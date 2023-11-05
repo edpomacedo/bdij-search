@@ -1,0 +1,20 @@
+<!-- No seu arquivo views/results.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+</head>
+<body>
+    <h2>Search Results</h2>
+    <% results.forEach(result => { %>
+        <div class="card">
+            <!-- Adiciona um link <a> ao redor do título com encode do título para URL -->
+            <h3><a href="<%= 'https://web.bdij.com.br/wiki/' + encodeURIComponent(result.title) %>"><%= result.title %></a></h3>
+            <!-- Utilize <%- %> para renderizar HTML sem escapar -->
+            <p class="search-match"><%- result.snippet %></p>
+        </div>
+    <% }); %>
+</body>
+</html>
