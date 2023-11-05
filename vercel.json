@@ -1,21 +1,4 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "app.js",  
-        "use": "@now/node" 
-      }
-    ],
-    "routes": [
-      {
-        "src": "/search", 
-        "dest": "/app.js" 
-      },
-      {
-        "src": "/(.*)", 
-        "dest": "/app.js"
-      }
-    ],
     "headers": [
         {
           "source": "/(.*)",
