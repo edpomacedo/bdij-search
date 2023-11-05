@@ -1,13 +1,26 @@
 {
+    "version": 2,
+    "builds": [
+      {
+        "src": "app.js",  
+        "use": "@now/node" 
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)", 
+        "dest": "/app.js" 
+      }
+    ],
     "headers": [
-        {
-          "source": "/(.*)",
-          "headers": [
-            {
-              "key": "Cache-Control",
-              "value": "public, max-age=3600" 
-            }
-          ]
-        }
-      ]
+      {
+        "source": "/(.*)",  
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=3600"  
+          }
+        ]
+      }
+    ]
   }
